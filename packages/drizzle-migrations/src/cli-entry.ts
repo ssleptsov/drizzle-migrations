@@ -10,6 +10,7 @@ import { MigrationUpCommand } from './commands/migration-up.command'
 import { SeedCreateCommand } from './commands/seed-create.command'
 import { SeedRunCommand } from './commands/seed-run.command'
 import { buildMigrationContext, resolveDrizzleConfig } from './helpers/drizzle-config'
+import { MigrationCheckCommand } from './commands/migration-check.command'
 
 const program = new Command()
 
@@ -51,6 +52,17 @@ program
     await command.run()
     process.exit(0)
   })
+
+  program
+  .command('check')
+  .description('Check if migrations can be generated or not')
+  .action(async () => {
+    const ctx = await buildMigrationContext(resolveDrizzleConfig())
+    const command = new MigrationCheckCommand(ctx)
+    await command.run()
+    process.exit(0)
+  })
+
 
 program
   .command('up')
