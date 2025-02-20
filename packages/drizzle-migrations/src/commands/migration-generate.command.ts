@@ -111,7 +111,7 @@ export class MigrationGenerateCommand extends BaseCommand<GenerateMigrationOptio
     const executeCommand = this.ctx.dialect === 'sqlite' ? 'run' : 'execute'
     return `
   import { sql } from 'drizzle-orm'
-  import type { MigrationArgs } from '@drepkovsky/drizzle-migrations'
+  import type { MigrationArgs } from '@ssleptsov/drizzle-migrations'
 
   export async function up({ db }: MigrationArgs<'${this.ctx.dialect}'>): Promise<void> {
   ${

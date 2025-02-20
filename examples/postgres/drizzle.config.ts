@@ -1,4 +1,4 @@
-import { defineConfig } from '@drepkovsky/drizzle-migrations'
+import { defineConfig } from '@ssleptsov/drizzle-migrations'
 import { drizzle } from 'drizzle-orm/postgres-js'
 import postgres from 'postgres'
 export default defineConfig({

@@ -1,3 +1,8 @@
+# Fork
+https://github.com/drepkovsky/drizzle-migrations
+For drizzle version up purpose
+
+
 # Drizzle migrations
 
 Simple tool that ads `up` and `down` migration capability for drizzle projects.
@@ -12,7 +17,7 @@ Automatic migration generation for drizzle was adapted from the **PayloadCMS** r
 ## Installation
 
 ```bash
-npm install @drepkovsky/drizzle-migrations # or yarn,pnpm,bun
+npm install @ssleptsov/drizzle-migrations # or yarn,pnpm,bun
 ```
 
 ## Configuration
@@ -20,11 +25,11 @@ npm install @drepkovsky/drizzle-migrations # or yarn,pnpm,bun
 To make this work you have to make small changes inside your `drizzle.config.ts` file
 
 ```ts
-import { defineConfig } from '@drepkovsky/drizzle-migrations'
+import { defineConfig } from '@ssleptsov/drizzle-migrations'
 import { drizzle } from 'drizzle-orm/postgres-js'
 import postgres from 'postgres'
 
-// notice how we are not using `defineConfig` from drizzle but from `@drepkovsky/drizzle-migrations`
+// notice how we are not using `defineConfig` from drizzle but from `@ssleptsov/drizzle-migrations`
 export default defineConfig({
   schema: './src/schema.ts',
   dialect: 'postgresql',
@@ -103,7 +108,7 @@ npm run drizzle-migrations seed:run --name <seeder-name> // default seeder is db
 
 ```ts
 import { sql } from 'drizzle-orm'
-import type { MigrationArgs } from '@drepkovsky/drizzle-migrations'
+import type { MigrationArgs } from '@ssleptsov/drizzle-migrations'
 
 export async function up({ db }: MigrationArgs<'postgresql'>): Promise<void> {
   await db.execute(sql`

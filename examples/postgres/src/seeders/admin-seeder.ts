@@ -1,4 +1,4 @@
-import { BaseSeeder, type SeederContext } from '@drepkovsky/drizzle-migrations'
+import { BaseSeeder, type SeederContext } from '@ssleptsov/drizzle-migrations'
 import { usersTable } from '../schema'
 import { randomUUID } from 'node:crypto'
 

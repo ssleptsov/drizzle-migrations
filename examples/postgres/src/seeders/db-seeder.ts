@@ -1,4 +1,4 @@
-import { BaseSeeder, type SeederContext } from '@drepkovsky/drizzle-migrations'
+import { BaseSeeder, type SeederContext } from '@ssleptsov/drizzle-migrations'
 import AdminSeeder from './admin-seeder'
 
 export default class DbSeeder extends BaseSeeder<'postgresql'> {
