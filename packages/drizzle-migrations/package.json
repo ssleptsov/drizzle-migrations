@@ -1,6 +1,6 @@
 {
   "name": "@ssleptsov/drizzle-migrations",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "description": "Tiny tool for managing migrations in Drizzle",
   "scripts": {
     "build": "rimraf dist && tsup",
@@ -9,7 +9,7 @@
   },
   "peerDependencies": {
     "drizzle-kit": "^0.31.1",
-    "drizzle-orm": "^0.43.0"
+    "drizzle-orm": "^0.43.0 || ^0.44.0 || ^0.45.0"
   },
   "bin": {
     "drizzle-migrations": "dist/cli-entry.cjs"
